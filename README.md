@@ -40,7 +40,7 @@ An Hardware Desctiption Language is used to describe digital logic circuits and 
 
 In this course we use **SystemVerliog** as our HDL of chioce. Eventhough Verilog can be used to for both simulate and synthesis, we will only use Verilog for synthesis. For simulations, we will use a Python library named **cocotb**. As an IDE we use **Vivado**.
 
-### 0.4. Getting Started ...
+### 0.5. Getting Started ...
 
 1. Set up the PYNQ dev board.
 
@@ -52,7 +52,7 @@ Vivado is a large and not-so-polished software that is only available for x86 Li
 
 [Vivado Download](https://www.xilinx.com/support/download.html)
 
-#### 0.5. Blinky! 🙂
+### 0.6. Blinky! 🙂
 
 Remark: Python profeciency is assumed.
 
