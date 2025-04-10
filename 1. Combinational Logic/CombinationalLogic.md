@@ -12,18 +12,25 @@
         - The current output is based on past inputs.
 
 ### 1.2. Digital Functions
-- A digital function is a mapping from $ \mathbb{B} \rightarrow \mathbb{B} $. Which can be expressed using Boolean algebra;
+- A digital function is a mapping from $ \mathbb{B} \rightarrow \mathbb{B} $, which can be expressed using Boolean algebra:
     - $ \mathbb{B} = \{ \mathbb{0}, \mathbb{1} \} $.
     - Operations are: 
         1. $ a \mid b $ (logical OR),  
         2. $ \neg a $ (logical NOT),  
         3. $ a \land b $ (logical AND).
-- Digital functions can represent graphically as thruth tables.
-- We can reduce all high level operations to combination of simple logicas operations (like AND, OR, NOT, XOR) which is known as logical reduction.
-- These gates actually do things! All high level algorithms need find their basic implememtations in these funcdamental functions. e.g.,
-    1. If 0, 1 are numbers XOR perform base 2 addition,
-    2. If 0 means positive and 1 means negative XOR performs sign determination of multiplication,
-    3. XOR express the if/else check (if A equals 1 then output is not B else output is B),
-    4. XOR does the check A is not equal to B,
+- Digital functions can be represented graphically as truth tables.
+- We can reduce all high-level operations to combinations of simple logical operations (like AND, OR, NOT, XOR), which is known as logical reduction.
+- These gates actually do things! All high-level algorithms need to find their basic implementations in these fundamental functions. For example:
+    1. If 0, 1 are numbers, XOR performs base-2 addition.
+    2. If 0 means positive and 1 means negative, XOR performs sign determination of multiplication.
+    3. XOR expresses the if/else check (if A equals 1, then output is not B; else, output is B).
+    4. XOR checks if A is not equal to B.
     5. And many more.
-- In general, there are $ 2^{2^n} $ possible $ n$-bit digital functions.
+- In general, there are $ 2^{2^n} $ possible $ n $-bit digital functions.
+- In practice, we want to find a digital function that describes a desired logical behavior. One way to specify a digital function in an algebraic form is sum-of-products;
+    1. First create the truth table.
+    2. Next write each row where the output is 1 as a product of inputs. (using AND).
+    3. Now combine them as a sum (using AND) to get the final expression.
+    - e.g.,  
+    <img src="../_img/sop.png" width="40%"/>  
+    Then, $ f(x, y, z) = \overline{x} \overline{y} \overline{z} + \overline{x} y \overline{z} + x \overline{y} \overline{z} + x y \overline{z} $.
