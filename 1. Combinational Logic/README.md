@@ -29,8 +29,8 @@
 - In general, there are \( 2^{2^n} \) possible \( n \)-bit digital functions.
 - In practice, we want to find a digital function that describes a desired logical behavior. One way to specify a digital function in an algebraic form is sum-of-products:
     1. First create the truth table.
-    2. Next write each row where the output is 1 as a product of inputs. (using AND).
+    2. Next, write each row where the output is 1 as a product of inputs. (using AND).
     3. Now combine them as a sum (using OR) to get the final expression.
     - e.g.,  
-    ![SOP Example](../_img/sop.png){:width="40%"}  
+    ![SOP Example](../_img/sop.png)  
     Then, $$ f(x, y, z) = \overline{x} \overline{y} \overline{z} + \overline{x} y \overline{z} + x \overline{y} \overline{z} + x y \overline{z} $$
