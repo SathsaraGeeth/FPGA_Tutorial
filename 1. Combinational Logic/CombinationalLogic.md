@@ -12,12 +12,12 @@
         - The current output is based on past inputs.
 
 ### 1.2. Digital Functions
-- A digital function is a mapping from $ \mathbb{B} \rightarrow \mathbb{B} $, which can be expressed using Boolean algebra:
-    - $ \mathbb{B} = \{ \mathbb{0}, \mathbb{1} \} $.
+- A digital function is a mapping from \( \mathbb{B} \rightarrow \mathbb{B} \), which can be expressed using Boolean algebra:
+    - \( \mathbb{B} = \{ 0, 1 \} \).
     - Operations are: 
-        1. $ a \mid b $ (logical OR),  
-        2. $ \neg a $ (logical NOT),  
-        3. $ a \land b $ (logical AND).
+        1. \( a \mid b \) (logical OR),  
+        2. \( \neg a \) (logical NOT),  
+        3. \( a \land b \) (logical AND).
 - Digital functions can be represented graphically as truth tables.
 - We can reduce all high-level operations to combinations of simple logical operations (like AND, OR, NOT, XOR), which is known as logical reduction.
 - These gates actually do things! All high-level algorithms need to find their basic implementations in these fundamental functions. For example:
@@ -26,11 +26,11 @@
     3. XOR expresses the if/else check (if A equals 1, then output is not B; else, output is B).
     4. XOR checks if A is not equal to B.
     5. And many more.
-- In general, there are $ 2^{2^n} $ possible $ n $-bit digital functions.
-- In practice, we want to find a digital function that describes a desired logical behavior. One way to specify a digital function in an algebraic form is sum-of-products;
+- In general, there are \( 2^{2^n} \) possible \( n \)-bit digital functions.
+- In practice, we want to find a digital function that describes a desired logical behavior. One way to specify a digital function in an algebraic form is sum-of-products:
     1. First create the truth table.
     2. Next write each row where the output is 1 as a product of inputs. (using AND).
-    3. Now combine them as a sum (using AND) to get the final expression.
+    3. Now combine them as a sum (using OR) to get the final expression.
     - e.g.,  
-    <img src="../_img/sop.png" width="40%"/>  
-    Then, $ f(x, y, z) = \overline{x} \overline{y} \overline{z} + \overline{x} y \overline{z} + x \overline{y} \overline{z} + x y \overline{z} $.
+    ![SOP Example](../_img/sop.png){:width="40%"}  
+    Then, $$ f(x, y, z) = \overline{x} \overline{y} \overline{z} + \overline{x} y \overline{z} + x \overline{y} \overline{z} + x y \overline{z} $$
